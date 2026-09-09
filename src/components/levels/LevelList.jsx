@@ -1,7 +1,6 @@
-import LevelCard from './LevelCard';
-import './level-grid.css';
+import LevelRow from './LevelRow';
 
-export default function LevelGrid({ levels = [], onDetails }) {
+export default function LevelList({ levels = [], onDetails }) {
   if (!levels || levels.length === 0) {
     return (
       <div className="level-grid-empty">
@@ -12,9 +11,9 @@ export default function LevelGrid({ levels = [], onDetails }) {
   }
 
   return (
-    <div className="level-grid">
+    <div className="level-list">
       {levels.map((level, index) => (
-        <LevelCard
+        <LevelRow
           key={level.key || index}
           level={level}
           index={index}

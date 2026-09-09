@@ -1,0 +1,5 @@
+.list-page {
+  min-height: calc(100vh - 70px);
+  background: #04050d;
+  padding: 40px 20px;
+}

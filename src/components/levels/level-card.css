@@ -1,4 +1,7 @@
 .level-card {
+  cursor: pointer;
+}
+.level-card {
   position: relative;
   display: flex;
   flex-direction: column;

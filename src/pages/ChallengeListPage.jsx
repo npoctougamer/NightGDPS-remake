@@ -1,8 +1,15 @@
+import LevelsBrowser from '../components/levels/LevelsBrowser';
+import { mockChallenges } from '../data/mockData';
+import './list-page.css';
+
 export default function ChallengeListPage() {
   return (
-    <div className="page-container">
-      <h1>Challenge List</h1>
-      <p>Здесь будет список челленджей...</p>
+    <div className="list-page">
+      <LevelsBrowser
+        levels={mockChallenges}
+        title="СПИСОК ЧЕЛЛЕНДЖЕЙ"
+        subtitle="✦ ЛУЧШИЕ ИСПЫТАНИЯ ✦"
+      />
     </div>
   );
 }
