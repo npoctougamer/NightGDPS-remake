@@ -2,12 +2,15 @@ import { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { mockReviews } from '../data/mockData';
 import './home-page.css';
+import ReviewForm from '../components/common/ReviewForm';
 
 // TODO: вставь сюда ID трейлера с YouTube.
 // ID — это то, что идёт после "v=" в ссылке: https://www.youtube.com/watch?v=ВОТ_ЭТО
 // Пока пусто — показывается красивая карточка-ссылка на канал.
-const TRAILER_VIDEO_ID = '';
-const TRAILER_URL = 'https://www.youtube.com/@NightGDPS';
+const TRAILER_VIDEO_ID = 'dBuMLYkYsQM';
+const TRAILER_URL = 'https://www.youtu.be/dBuMLYkYsQM';
+const TELEGRAM_URL = 'https://t.me/nightgdpsV2';
+const DISCORD_URL = '#';
 
 export default function HomePage() {
   // useState — это "память" компонента (данные, которые могут меняться)
@@ -68,7 +71,7 @@ export default function HomePage() {
         {/* Кнопки соцсетей и скачивания */}
         <div className="social-links">
           <a
-            href="#"
+            href={DISCORD_URL}
             className="social-btn social-discord"
             target="_blank"
             rel="noopener noreferrer"
@@ -77,7 +80,7 @@ export default function HomePage() {
             <span className="social-label">Discord</span>
           </a>
           <a
-            href="#"
+            href={TELEGRAM_URL}
             className="social-btn social-telegram"
             target="_blank"
             rel="noopener noreferrer"
@@ -170,9 +173,7 @@ export default function HomePage() {
             </div>
           ))}
         </div>
-        <p className="reviews-note">
-          Форма отправки отзывов появится после подключения Firebase (Фаза 2)
-        </p>
+	<ReviewForm />
       </section>
 
       {/* ===== НЕДАВНИЕ ИЗМЕНЕНИЯ ===== */}
