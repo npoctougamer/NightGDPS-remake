@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom';
 import './home-page.css';
 
 export default function HomePage() {
@@ -10,7 +11,6 @@ export default function HomePage() {
     creators: 0,
   });
 
-  // Пока используем фейковые данные, потом подключим Firebase
   useEffect(() => {
     setStats({
       demons: 127,
@@ -26,12 +26,33 @@ export default function HomePage() {
       {/* Hero Section */}
       <section className="hero-section">
         <div className="hero-content">
+          <div className="hero-subtitle-top">GEOMETRY DASH PRIVATE SERVER</div>
           <div className="hero-logo">🌙</div>
           <h1 className="hero-title">NIGHT GDPS</h1>
-          <p className="hero-subtitle">Official Global Demon List</p>
-          <p className="hero-description">
-            Официальный лист демонов сервера Night GDPS. Рейтинг игроков, рекорды и лучшие уровни.
-          </p>
+        </div>
+        
+        {/* Quick Access Buttons */}
+        <div className="quick-access">
+          <Link to="/demons" className="quick-btn">
+            <span className="quick-icon">👹</span>
+            <span className="quick-label">Demon List</span>
+          </Link>
+          <Link to="/challenges" className="quick-btn">
+            <span className="quick-icon">🔥</span>
+            <span className="quick-label">Challenge List</span>
+          </Link>
+          <Link to="/impossible" className="quick-btn">
+            <span className="quick-icon">💀</span>
+            <span className="quick-label">Impossible List</span>
+          </Link>
+          <Link to="/slayers" className="quick-btn">
+            <span className="quick-icon">⚔️</span>
+            <span className="quick-label">Top Slayers</span>
+          </Link>
+          <Link to="/creators" className="quick-btn">
+            <span className="quick-icon">🛠️</span>
+            <span className="quick-label">Top Creators</span>
+          </Link>
         </div>
       </section>
 
@@ -72,7 +93,6 @@ export default function HomePage() {
   );
 }
 
-// Вспомогательный компонент для статистики
 function StatCard({ icon, label, value }) {
   return (
     <div className="stat-card">
@@ -83,7 +103,6 @@ function StatCard({ icon, label, value }) {
   );
 }
 
-// Вспомогательный компонент для недавних изменений
 function RecentItem({ type, text, time }) {
   const icons = {
     new: '✨',
