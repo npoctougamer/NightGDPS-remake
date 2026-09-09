@@ -10,6 +10,7 @@ const TRAILER_VIDEO_ID = '';
 const TRAILER_URL = 'https://www.youtube.com/@NightGDPS';
 
 export default function HomePage() {
+  // useState — это "память" компонента (данные, которые могут меняться)
   const [stats, setStats] = useState({
     demons: 0,
     challenges: 0,
@@ -18,7 +19,9 @@ export default function HomePage() {
     creators: 0,
   });
 
+  // useEffect — код, который выполняется один раз после открытия страницы
   useEffect(() => {
+    // Здесь потом будем загружать реальную статистику из Firebase
     setStats({
       demons: 127,
       challenges: 45,
@@ -30,7 +33,7 @@ export default function HomePage() {
 
   return (
     <div className="home-page">
-      {/* Hero Section */}
+      {/* ===== HERO СЕКЦИЯ (шапка) ===== */}
       <section className="hero-section">
         <div className="hero-content">
           <div className="hero-subtitle-top">GEOMETRY DASH PRIVATE SERVER</div>
@@ -38,6 +41,7 @@ export default function HomePage() {
           <h1 className="hero-title">NIGHT GDPS</h1>
         </div>
 
+        {/* Кнопки быстрого перехода к спискам */}
         <div className="quick-access">
           <Link to="/demons" className="quick-btn">
             <span className="quick-icon">👹</span>
@@ -60,9 +64,40 @@ export default function HomePage() {
             <span className="quick-label">Top Creators</span>
           </Link>
         </div>
+
+        {/* Кнопки соцсетей и скачивания */}
+        <div className="social-links">
+          <a
+            href="#"
+            className="social-btn social-discord"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="social-icon">💬</span>
+            <span className="social-label">Discord</span>
+          </a>
+          <a
+            href="#"
+            className="social-btn social-telegram"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="social-icon">✈️</span>
+            <span className="social-label">Telegram</span>
+          </a>
+          <a
+            href="#"
+            className="social-btn social-download"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <span className="social-icon">⬇️</span>
+            <span className="social-label">Скачать GDPS</span>
+          </a>
+        </div>
       </section>
 
-      {/* Stats Section */}
+      {/* ===== СТАТИСТИКА СЕРВЕРА ===== */}
       <section className="stats-section">
         <h2 className="section-title">СТАТИСТИКА СЕРВЕРА</h2>
         <div className="stats-grid">
@@ -74,7 +109,29 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Trailer Section */}
+      {/* ===== СКАЧАТЬ ИГРУ ===== */}
+      <section className="download-section">
+        <h2 className="section-title">СКАЧАТЬ ИГРУ</h2>
+        <p className="download-version">Версия 2.2081</p>
+        <div className="download-buttons">
+          <a href="#" className="download-btn download-pc">
+            <span className="download-icon">💻</span>
+            <div className="download-info">
+              <span className="download-platform">PC / Windows</span>
+              <span className="download-hint">Скачать .zip архив для игры на компьютере</span>
+            </div>
+          </a>
+          <a href="#" className="download-btn download-android">
+            <span className="download-icon">📱</span>
+            <div className="download-info">
+              <span className="download-platform">Android</span>
+              <span className="download-hint">Скачать .apk файл для игры на телефоне</span>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      {/* ===== ТРЕЙЛЕР ===== */}
       <section className="trailer-section">
         <h2 className="section-title">Трейлер Night GDPS</h2>
         {TRAILER_VIDEO_ID ? (
@@ -96,7 +153,7 @@ export default function HomePage() {
         )}
       </section>
 
-      {/* Reviews Section */}
+      {/* ===== ОТЗЫВЫ ИГРОКОВ ===== */}
       <section className="reviews-section">
         <h2 className="section-title">Отзывы игроков</h2>
         <div className="reviews-grid">
@@ -118,7 +175,7 @@ export default function HomePage() {
         </p>
       </section>
 
-      {/* Recent Changes Section */}
+      {/* ===== НЕДАВНИЕ ИЗМЕНЕНИЯ ===== */}
       <section className="recent-section">
         <h2 className="section-title">Недавние изменения</h2>
         <div className="recent-list">
@@ -143,6 +200,9 @@ export default function HomePage() {
   );
 }
 
+// ===== ВСПОМОГАТЕЛЬНЫЕ КОМПОНЕНТЫ (используются только на этой странице) =====
+
+// Карточка статистики (Демоны: 127 и т.д.)
 function StatCard({ icon, label, value }) {
   return (
     <div className="stat-card">
@@ -153,6 +213,7 @@ function StatCard({ icon, label, value }) {
   );
 }
 
+// Строка недавнего изменения
 function RecentItem({ type, text, time }) {
   const icons = {
     new: '✨',

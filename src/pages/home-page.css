@@ -385,3 +385,145 @@
   font-size: 0.85rem;
   margin-top: 20px;
 }
+
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.social-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 12px;
+  text-decoration: none;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.social-discord {
+  background: linear-gradient(135deg, #5865F2, #4752c4);
+}
+
+.social-discord:hover {
+  background: linear-gradient(135deg, #6772ff, #5865F2);
+}
+
+.social-telegram {
+  background: linear-gradient(135deg, #0088cc, #006699);
+}
+
+.social-telegram:hover {
+  background: linear-gradient(135deg, #1a9ddd, #0088cc);
+}
+
+.social-download {
+  background: linear-gradient(135deg, #10b981, #059669);
+}
+
+.social-download:hover {
+  background: linear-gradient(135deg, #34d399, #10b981);
+}
+
+.social-icon {
+  font-size: 1.1rem;
+}
+
+/* Download Section */
+.download-section {
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.download-version {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 30px;
+  letter-spacing: 1px;
+}
+
+.download-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.download-btn {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 30px;
+  border-radius: 16px;
+  text-decoration: none;
+  color: white;
+  transition: all 0.3s;
+  min-width: 280px;
+  border: 1px solid rgba(167, 139, 250, 0.2);
+}
+
+.download-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+.download-pc {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.15), rgba(96, 165, 250, 0.05));
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+.download-pc:hover {
+  background: linear-gradient(135deg, rgba(96, 165, 250, 0.25), rgba(96, 165, 250, 0.1));
+}
+
+.download-android {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.15), rgba(16, 185, 129, 0.05));
+  border-color: rgba(16, 185, 129, 0.4);
+}
+
+.download-android:hover {
+  background: linear-gradient(135deg, rgba(16, 185, 129, 0.25), rgba(16, 185, 129, 0.1));
+}
+
+.download-icon {
+  font-size: 2.5rem;
+}
+
+.download-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  text-align: left;
+}
+
+.download-platform {
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.download-hint {
+  font-size: 0.8rem;
+  color: #94a3b8;
+}
+
+@media (max-width: 640px) {
+  .download-btn {
+    width: 100%;
+    min-width: auto;
+  }
+}

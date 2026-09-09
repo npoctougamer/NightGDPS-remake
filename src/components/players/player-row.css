@@ -1,0 +1,152 @@
+/* Список игроков */
+.players-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Строка игрока */
+.player-row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: rgba(13, 16, 32, 0.85);
+  border: 1px solid rgba(167, 139, 250, 0.15);
+  border-radius: 12px;
+  padding: 16px 20px;
+  transition: all 0.25s;
+}
+
+.player-row:hover {
+  border-color: rgba(167, 139, 250, 0.45);
+  transform: translateX(4px);
+  box-shadow: 0 8px 30px rgba(167, 139, 250, 0.15);
+}
+
+/* Топ-3 выделяем */
+.player-row-top {
+  background: linear-gradient(135deg, rgba(167, 139, 250, 0.08), rgba(96, 165, 250, 0.08));
+  border-color: rgba(167, 139, 250, 0.35);
+}
+
+/* Позиция */
+.player-position {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  height: 50px;
+  font-size: 2rem;
+}
+
+.pos-number {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  color: #a78bfa;
+}
+
+/* Информация */
+.player-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-width: 0;
+}
+
+.player-name-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.player-flag {
+  font-size: 1.5rem;
+}
+
+.player-name {
+  margin: 0;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 800;
+}
+
+/* Статистика */
+.player-stats {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.stat-item {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+  padding: 4px 12px;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  border: 1px solid rgba(167, 139, 250, 0.15);
+}
+
+.stat-value {
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  font-family: 'Orbitron', sans-serif;
+}
+
+.stat-value.highlight {
+  color: #a78bfa;
+  font-size: 1.1rem;
+}
+
+.stat-label {
+  color: #94a3b8;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.stat-item.hardest {
+  background: rgba(167, 139, 250, 0.1);
+  border-color: rgba(167, 139, 250, 0.3);
+}
+
+.stat-item.hardest .stat-value {
+  color: #60a5fa;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+/* Мобильная версия */
+@media (max-width: 640px) {
+  .player-row {
+    padding: 12px 14px;
+    gap: 12px;
+  }
+
+  .player-position {
+    min-width: 36px;
+    height: 36px;
+    font-size: 1.4rem;
+  }
+
+  .player-name {
+    font-size: 1rem;
+  }
+
+  .player-stats {
+    gap: 8px;
+  }
+
+  .stat-item {
+    padding: 3px 8px;
+    font-size: 0.85rem;
+  }
+
+  .stat-value {
+    font-size: 0.85rem;
+  }
+}
