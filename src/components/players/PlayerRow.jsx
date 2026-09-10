@@ -1,3 +1,4 @@
+import { getFlagEmoji } from '../../utils/players';
 import './player-row.css';
 
 export default function PlayerRow({ player, index, type = 'slayer' }) {
@@ -81,14 +82,4 @@ export default function PlayerRow({ player, index, type = 'slayer' }) {
       </div>
     </div>
   );
-}
-
-// Конвертируем код страны (RU, UA, DE) в флаг эмодзи
-function getFlagEmoji(countryCode) {
-  if (!countryCode || countryCode.length !== 2) return '🏳️';
-  const codePoints = countryCode
-    .toUpperCase()
-    .split('')
-    .map(char => 127397 + char.charCodeAt());
-  return String.fromCodePoint(...codePoints);
 }

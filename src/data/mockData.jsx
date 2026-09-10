@@ -179,6 +179,8 @@ export const mockSlayers = [
     completedChallenges: 12,
     totalPoints: 342.5,
     hardestDemon: 'T3YnkaPolis',
+    hardestPoints: 18.5,
+    completedLevels: ['T3YnkaPolis', 'TAKE YOUR HAT COWBOY', 'Sen Skalibrirowanych', 'SHOFER', 'Dizorientation', 'Vscapes'],
     joinedAt: '2024-03-15',
   },
   {
@@ -189,6 +191,8 @@ export const mockSlayers = [
     completedChallenges: 8,
     totalPoints: 287.3,
     hardestDemon: 'Cosmic Chaos',
+    hardestPoints: 15.2,
+    completedLevels: ['TAKE YOUR HAT COWBOY', 'Sen Skalibrirowanych', 'SHOFER', 'Dizorientation'],
     joinedAt: '2024-01-20',
   },
   {
@@ -199,6 +203,8 @@ export const mockSlayers = [
     completedChallenges: 10,
     totalPoints: 234.8,
     hardestDemon: 'Sen Skalibrirowanych',
+    hardestPoints: 10.0,
+    completedLevels: ['Sen Skalibrirowanych', 'SHOFER', 'Dizorientation', 'Vscapes'],
     joinedAt: '2024-05-10',
   },
   {
@@ -209,6 +215,8 @@ export const mockSlayers = [
     completedChallenges: 6,
     totalPoints: 198.4,
     hardestDemon: 'Dizorientation',
+    hardestPoints: 7.5,
+    completedLevels: ['SHOFER', 'Dizorientation', 'Vscapes'],
     joinedAt: '2024-02-28',
   },
   {
@@ -219,55 +227,8 @@ export const mockSlayers = [
     completedChallenges: 4,
     totalPoints: 142.0,
     hardestDemon: 'Fire Challenge',
+    hardestPoints: 5.0,
+    completedLevels: ['Vscapes', 'SHOFER'],
     joinedAt: '2024-06-05',
-  },
-];
-
-// Топ креаторов
-export const mockCreatorsTop = [
-  {
-    key: 'c1',
-    name: 'LichiGMDJ',
-    country: 'RU',
-    creatorPoints: 1847,
-    levelsCreated: 23,
-    verifiedLevels: 18,
-    hardestLevel: 'Cosmic Chaos',
-  },
-  {
-    key: 'c2',
-    name: 'crucified',
-    country: 'UA',
-    creatorPoints: 1423,
-    levelsCreated: 19,
-    verifiedLevels: 15,
-    hardestLevel: 'Sen Skalibrirowanych',
-  },
-  {
-    key: 'c3',
-    name: 'sqcc',
-    country: 'BR',
-    creatorPoints: 987,
-    levelsCreated: 14,
-    verifiedLevels: 11,
-    hardestLevel: 'TAKE YOUR HAT COWBOY',
-  },
-  {
-    key: 'c4',
-    name: 'T3Ynka',
-    country: 'RU',
-    creatorPoints: 754,
-    levelsCreated: 11,
-    verifiedLevels: 9,
-    hardestLevel: 'T3YnkaPolis',
-  },
-  {
-    key: 'c5',
-    name: 'PixelArtist',
-    country: 'US',
-    creatorPoints: 512,
-    levelsCreated: 8,
-    verifiedLevels: 6,
-    hardestLevel: 'Neon Nightmare',
   },
 ];

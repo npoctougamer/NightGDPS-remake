@@ -1,0 +1,99 @@
+.players-browser {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.players-toolbar {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  margin-bottom: 14px;
+  flex-wrap: wrap;
+}
+
+.players-select {
+  background: rgba(13, 16, 32, 0.8);
+  border: 1px solid rgba(167, 139, 250, 0.2);
+  border-radius: 10px;
+  color: #cbd5e1;
+  padding: 0 12px;
+  height: 44px;
+  outline: none;
+  cursor: pointer;
+}
+
+.compare-open-btn {
+  height: 44px;
+  padding: 0 16px;
+  border-radius: 10px;
+  border: 1px solid rgba(167, 139, 250, 0.4);
+  background: rgba(167, 139, 250, 0.12);
+  color: #a78bfa;
+  font-weight: 700;
+  font-size: 0.85rem;
+  cursor: pointer;
+  transition: 0.2s;
+  white-space: nowrap;
+}
+
+.compare-open-btn:hover {
+  background: rgba(167, 139, 250, 0.25);
+}
+
+.players-view-pills {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.view-pill {
+  padding: 8px 16px;
+  border-radius: 999px;
+  border: 1px solid rgba(167, 139, 250, 0.25);
+  background: transparent;
+  color: #94a3b8;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.view-pill.active {
+  background: rgba(167, 139, 250, 0.2);
+  color: #fff;
+  border-color: rgba(167, 139, 250, 0.6);
+}
+
+.players-empty {
+  text-align: center;
+  color: #64748b;
+  padding: 40px 0;
+  font-size: 1rem;
+}
+
+/* Строка топа стран */
+.country-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: rgba(13, 16, 32, 0.85);
+  border: 1px solid rgba(167, 139, 250, 0.15);
+  border-radius: 12px;
+  padding: 16px 20px;
+}
+
+.country-flag {
+  font-size: 2.2rem;
+}
+
+@media (max-width: 640px) {
+  .players-toolbar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .players-select,
+  .compare-open-btn {
+    width: 100%;
+  }
+}
